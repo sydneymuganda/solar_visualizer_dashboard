@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+        --body_background: white;
+        --body_color: black;
+        --link_color: navy;
+}
+
+[data-theme="dark"]{
+    --body_background: #282c34;
+    --body_color:white;
+    --link_color: cyan;
+
+}
+
+#light {
+    background-color: #f3ebf6;
+}
+#dark {
+    background-color: #46045e;
+}
+body.dark-mode {
+    --background-color: #333333;
+    --text-color: #f0f0f0;
+    /* add other color variables for dark theme here */
+}
+body {
+    margin: 0;
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    /* style other elements based on the variables */
+}
+main {
+    margin: 0;
+}
+#light .main {
+    background-color: #fff;
+}
+#dark .main {
+    background-color: #38004c;
+}
+.status-text {
+    color: green; /* base color of the text */
+    text-shadow: 0 0 5px #00ff00, /* horizontal offset, vertical offset, blur radius, color */
+                0 0 10px #00ff00,
+                0 0 15px #00ff00,
+                0 0 20px #00ff00;
+}
+.status-text.running {
+  color: green;
+  text-shadow: 0 0 5px #00ff00,
+               0 0 10px #00ff00,
+               0 0 15px #00ff00,
+               0 0 20px #00ff00;
+}
+
+.status-text.stopped {
+  color: red;
+  text-shadow: 0 0 5px #ff0000,
+               0 0 10px #ff0000,
+               0 0 15px #ff0000,
+               0 0 20px #ff0000;
+}
